@@ -9,7 +9,7 @@ export class AuthController {
     constructor(
         private authService: AuthService
     ) {}
-
+    
     @Post('/register')
     register(@Body() authCredentialsDto:AuthCredentialsDto): Promise<void> {
         return this.authService.register(authCredentialsDto);
